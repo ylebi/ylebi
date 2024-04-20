@@ -6,7 +6,7 @@ endef
 BREW_PACKAGES := gh hugo pre-commit prettier python@3.12 uv
 
 init:
-	@git submodule update --init --recursive
+	# @git submodule update --init --recursive
 
 ifeq ($(CI),)
 	@$(call PRINT_STEP,installing brew dependencies)
