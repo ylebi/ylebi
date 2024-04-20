@@ -19,3 +19,8 @@
 
 # Go workspace file
 go.work
+
+public
+.DS_Store
+.venv
+node_modules

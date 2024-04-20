@@ -1,0 +1,17 @@
+<head>
+  <title>{{ with .Title }}{{ humanize . }} | {{ end }}{{ .Site.Title }}</title>
+  <meta charset='utf-8'>
+  {{- with site.Params.ga_verify }}
+  <meta name="google-site-verification" content="{{ . }}" />
+  {{- end }}
+  <meta name="viewport" content ="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  {{- partialCached "analytics" . }}
+  {{- partial "opengraph" . }}
+  {{- partialCached "favicon" . }}
+  {{- partialCached "styles" . }}
+  <!-- Start of Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6218655854908835"
+     crossorigin="anonymous"></script>
+  <!-- End of Google AdSense -->     
+</head>
