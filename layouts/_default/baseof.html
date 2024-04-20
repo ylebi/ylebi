@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{{- $mode := partialCached "func/getMode" . }}
+<html lang="{{ .Lang }}" {{ if $mode }} data-mode="{{ $mode }}"{{ end }}>
+  {{ partial "head" . }}
+  <body>
+    <!-- Start of vanilla-back-to-top -->
+    <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
+    <script>addBackToTop({
+      diameter: 56,
+      backgroundColor: 'rgb(255, 82, 82)',
+      textColor: '#fff'
+    })</script>
+    <!-- End of vanilla-back-to-top -->
+    {{ partialCached "nav" . }}
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ partialCached "footer" . }}
+    {{ partialCached "sprites" . }}
+  </body>
+</html>
