@@ -30,14 +30,14 @@ Before diving into the development, it's crucial to understand the core concepts
 
 1. **Install Tools:** Ensure you have [`kubectl`](https://kubernetes.io/docs/reference/kubectl/), and the Kubernetes cluster is accessible. Also, install the [Operator SDK](https://sdk.operatorframework.io/docs/installation/), which provides tools to help you write, build, and run Operators.
 2. **Create a Project:** Use the Operator SDK to create a new project. For example:
-   ```bash
-   operator-sdk init --domain=example.com --repo=github.com/example/myoperator
-
+```bash
+operator-sdk init --domain=example.com --repo=github.com/example/myoperator
+```
 ## Step 3: Create a Custom Resource Definition (CRD)
 
 Operators work by extending Kubernetes APIs with Custom Resource Definitions (CRDs). Define your CRD to specify the desired and actual state of your application components.
 
-```
+```yaml
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
@@ -63,8 +63,7 @@ spec:
 ## Step 4: Implement Your Operator Logic
 
 Write the operator's logic to handle the application lifecycle based on your CRD. Implementing operators often involves watching for changes to your custom resources and managing resources accordingly.
-
-```
+```go
 import (
     "context"
     "github.com/operator-framework/operator-sdk/pkg/log/zap"
@@ -81,8 +80,7 @@ func (r *Reconciler) Reconcile(ctx context.Context, req reconcile.Request) (reco
 ## Step 5: Build and Deploy Your Operator
 
 Once you've implemented the logic, build and deploy your operator. Ensure it's tested thoroughly.
-
-```
+```bash
 operator-sdk build my-operator-image:tag
 kubectl apply -f deploy/operator.yaml
 ```
@@ -93,4 +91,4 @@ Developing Kubernetes Operators can greatly simplify the management of applicati
 
 For more detailed guidance and advanced topics, refer to the [Operator SDK User Guide](https://sdk.operatorframework.io/docs/).
 
-
+In the next post, I'll be guiding how to create your first Kubernetes Operator.
