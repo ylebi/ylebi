@@ -21,5 +21,6 @@
     </main>
     {{ partialCached "footer" . }}
     {{ partialCached "sprites" . }}
+    {{ block "js-extra" . }}{{ end }}
   </body>
 </html>

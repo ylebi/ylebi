@@ -1177,7 +1177,7 @@ aside h3 {
 
 pre {
   display: grid;
-  white-space: wrap;
+  white-space: none;
 }
 
 .highlight {
@@ -1340,6 +1340,30 @@ pre {
 
 .w {
   color: #666;
+}
+
+.copy-code-button {
+  color: #272822;
+  background-color: #fff;
+  border-color: #272822;
+  border: 2px solid;
+  border-radius: 3px 3px 0px 0px;
+  /* right-align */
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  margin-bottom: -2px;
+  padding: 3px 8px;
+  font-size: 0.8em;
+}
+
+.copy-code-button:hover {
+  cursor: pointer;
+  background-color: #f2f2f2;
+}
+
+.copy-code-button:active {
+  background-color: #d9d9d9;
 }
 
 /*# sourceMappingURL=styles.css.map */
