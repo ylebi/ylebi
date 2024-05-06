@@ -91,4 +91,4 @@ Developing Kubernetes Operators can greatly simplify the management of applicati
 
 For more detailed guidance and advanced topics, refer to the [Operator SDK User Guide](https://sdk.operatorframework.io/docs/).
 
-In the next post, I'll be guiding how to create your first Kubernetes Operator.
+In the [next post](/posts/how-to-bootstrap-memcached-operator/), I'll be guiding how to create your first Kubernetes Operator.
