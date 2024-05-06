@@ -6,6 +6,7 @@ title = "Lebi's reflections"
 theme = ["github.com/onweru/newsroom"] # edit this if you'ld rather use a fork of this repo
 canonifyurls = true
 paginate = 6
+enableRobotsTXT = true
 
 [permalinks]
   pages = ':filename/'
