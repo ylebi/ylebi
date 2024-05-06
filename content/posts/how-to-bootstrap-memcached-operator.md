@@ -75,6 +75,7 @@ type MemcachedStatus struct {
 make generate
 make manifests
 ```
+![Kubernetes Memcached-Operator Flowchart Diagram](/images/kubernetes-memcached-operator-flowchart-diagram.png)
 
 ### Step 3: Implement the Controller Logic
 1. **Define the Reconciliation Logic:** In the `controllers/memcached_controller.go` file, implement the reconciliation logic for your operator. This includes defining how the operator responds to create, update, and delete events:
